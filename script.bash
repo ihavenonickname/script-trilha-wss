@@ -117,16 +117,21 @@ root_domain="$1"
 
     # Passo 5 - Enumerar diretórios.
     #
-    # Neste passo uma lista de diretórios comuns são testados em cada uma das
-    # URLs a fim de encontrar páginas acessíveis, possivelmente vulneráveis.
+    # Aplica um brute-force em cada URL a fim de encontrar páginas acessíveis e
+    # possivelmente vulneráveis.
 
-    # O comando dirb só consegue receber a URL no primeiro parâmetro
-    # posicional, ou seja, não é possível encadear o dirb usando pipes.
-    # Por este motivo, o comando xargs atua como um "wraper" que redireciona
-    # cada linha do stdin para o primeiro parâmetro do dirb.
+    # O comando dirb testa uma lista de diretórios em uma dada URL. Caso
+    # nenhuma lista de diretórios seja informada (como é o caso aqui) ele
+    # utiliza a lista padrão que possui vários diretórios comuns em servidores
+    # web.
+    #
+    # Este comando espera receber a URL no primeiro parâmetro posicional, ou
+    # seja, não é possível encadear o dirb usando pipes. Por este motivo, o
+    # comando xargs atua como um "wraper" que redireciona cada linha do stdin
+    # para o primeiro parâmetro do dirb.
 
     # Flags utilizadas no xargs
-    # -I <string>: Informe o placeholder que será substituido pela linha vinda
+    # -I <string>: Informa o placeholder que será substituido pela linha vinda
     # do stdin.
     #
     # Flags utilizadas no dirb
@@ -138,7 +143,7 @@ root_domain="$1"
     #
     # As flags do cut já foram explicadas anteriormente. No caso do grep, a
     # flag `-E` informa que o grep deve utilizar o motor de regex estendido.
-    # Isso é necessário por causa do caractere especial `^` que é a âncora de
+    # Isto é necessário por causa do caractere especial `^` que é a âncora de
     # início da string.
     xargs -I {} dirb {} -S | grep -E '^==> DIRECTORY:' | cut -d ' ' -f 3
 
