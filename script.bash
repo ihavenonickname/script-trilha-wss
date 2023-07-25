@@ -1,7 +1,9 @@
 #!/bin/bash
 
-# Considerações gerais sobre o script:
+# Considerações gerais sobre o script
 #
+#
+# Sobre o uso de subshell
 #
 # No bash, os parênteses são usados para criar um subshell, que é uma instância
 # separada do shell rodando em um processo-filho a partir do shell atual. Neste
@@ -16,6 +18,8 @@
 # manutenção do script, pois os comandos são agrupados em blocos lógicos que
 # cumprem uma tarefa específica.
 #
+#
+# Sobre o descarte do stderr
 #
 # A sintaxe `2> /dev/null` é utilizada para ignorar o stderr dos comandos.
 # Por convenção, o stderr geralmente é utilizado para printar textos em
