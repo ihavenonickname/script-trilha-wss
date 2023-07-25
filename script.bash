@@ -7,6 +7,5 @@ root_domain="$1"
 | sort \
 | uniq \
 | httpx-toolkit -sc -td -json -probe 2> /dev/null \
-| grep '"failed":false' \
 | jq 'select(.failed == false)' \
 | jq '.url, .host, .technologies'
