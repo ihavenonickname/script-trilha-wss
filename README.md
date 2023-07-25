@@ -2,7 +2,11 @@
 
 ## Objetivo
 
-Automatizar o processo de enumeração de subdomínios e demais técnicas de recon utilizando ferramentas do Kali Linux como building blocks do nosso script.
+Automatizar processos de recon passivo e ativo utilizando ferramentas nativas do Kali Linux como building blocks de um script bash.
+
+- Enumeração de subdomínios
+- Probe de subdomínios
+- Enumeração de diretórios
 
 ## Integrantes
 
