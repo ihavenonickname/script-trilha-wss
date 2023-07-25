@@ -19,9 +19,9 @@
 #
 # A sintaxe `2> /dev/null` é utilizada para ignorar o stderr dos comandos.
 # Por convenção, o stderr geralmente é utilizado para printar textos em
-# linguagem natural para seres lidos por seres humanos.
+# linguagem natural para serem lidos por seres humanos.
 # Similarmente, o stdout é utilizado para printar textos estruturados para
-# serem processado pelo computador.
+# serem processados pelo computador.
 # Aqui só interessa o texto estruturado que é processado pela pipeline.
 
 # Este script deve receber no primeiro parâmetro o domínio base que será usado
