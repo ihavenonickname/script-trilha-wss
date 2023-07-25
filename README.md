@@ -11,3 +11,9 @@ Automatizar o processo de enumeração de subdomínios e demais técnicas de rec
 - LorranMarques
 - Marceloboff
 - r0dr1g0
+
+## Uso do script
+
+```bash
+./script.sh dominio.com.br
+```
