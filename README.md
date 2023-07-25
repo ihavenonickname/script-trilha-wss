@@ -25,5 +25,4 @@ Automatizar processos de recon passivo e ativo utilizando ferramentas nativas do
 ## Melhorias pendentes
 
 - Mostrar qual passo está sendo executado
-- Opcionalmente gravar o output de cada passo num arquivo
 - Opcionalmente iniciar a execução a partir de um passo específico
