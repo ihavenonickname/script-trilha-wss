@@ -3,6 +3,19 @@
 # Considerações gerais sobre o script
 #
 #
+#
+# Sobre bash vs sh
+#
+# Este script utiliza o bash para ser executado. O bash é um superset do sh,
+# similar ao C++ que é um superset de C. Há várias funcionalidades presentes no
+# bash que não existem no sh clássico, tais como:
+#
+# - Arrays
+# - Expressões booleanas complexas
+# - Funções
+#
+#
+#
 # Sobre o uso de subshell
 #
 # No bash, os parênteses são usados para criar um subshell, que é uma instância
@@ -17,6 +30,7 @@
 # execução do script, este estilo foi adotado para facilitar a leitura e
 # manutenção do script, pois os comandos são agrupados em blocos lógicos que
 # cumprem uma tarefa específica.
+#
 #
 #
 # Sobre o descarte do stderr
