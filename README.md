@@ -21,3 +21,9 @@ Automatizar processos de recon passivo e ativo utilizando ferramentas nativas do
 ```bash
 ./script.sh dominio.com.br
 ```
+
+## Melhorias pendentes
+
+- Mostrar qual passo está sendo executado
+- Opcionalmente gravar o output de cada em arquivos
+- Opcionalmente iniciar a execução a partir de um passo específico
