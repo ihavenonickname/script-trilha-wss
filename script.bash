@@ -52,6 +52,27 @@
 #                             PROCESSAR ARGUMENTOS                             #
 ################################################################################
 
+function check_tool
+{
+    # command é um comando nativo do bash, não um programa. Ele permite
+    # chamar um comando ignorando funções e alias presentes no escopo. Isto é,
+    # mesmo que haja uma função ou alias com o nome chamado, o command vai
+    # ignorar essa função ou alias e procurará no PATH um comando com aquele
+    # nome.
+    if ! command -v "$1" $> /dev/null; then
+        echo "$1" not installed
+        exit 1
+    fi
+}
+
+check_tool amass
+
+check_tool subfinder
+
+check_tool httpx-toolkit
+
+check_tool dirb
+
 # A data e hora UTC em formato compatível com ISO 8601 é utilizada no nome dos
 # arquivos que contêm o output intermediário de cada passo.
 start_date=$(date -u +"%Y-%m-%dT%H-%M-%SZ")
@@ -83,7 +104,7 @@ fi
 
 function get_output_filename
 {
-    echo "script-$start_date-step-$1.txt"
+    echo "script-$root_domain-step-$1-$start_date.txt"
 }
 
 echo "Root domain: $root_domain"
