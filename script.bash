@@ -132,7 +132,10 @@ step_1_start_ts=$(date +%s)
     # -passive: Apenas consultar as fontes públicas sem interagir com o alvo.
     # -d <string>: Domínio base a ser enumerado.
     amass enum -passive -d $root_domain 2> /dev/null;
-
+    # Flags utilizadas no findomain
+    # -q: Não printar nada no stderr.
+    # -t <string>: Domínio base a ser enumerado.
+    findomain -q -t $root_domain
     # Flags utilizadas no subfinder
     # -silent: Não printar nada no stderr.
     # -d <string>: Domínio base a ser enumerado.

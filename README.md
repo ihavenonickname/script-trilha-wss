@@ -19,7 +19,7 @@ Automatizar processos de recon passivo e ativo utilizando ferramentas nativas do
 ## Uso do script
 
 ```bash
-./script.sh dominio.com.br
+./script.sh -d dominio.com.br
 ```
 
 ## Melhorias pendentes
