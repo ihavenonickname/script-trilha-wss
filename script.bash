@@ -67,6 +67,8 @@ function check_tool
 
 check_tool amass
 
+check_tool findomain
+
 check_tool subfinder
 
 check_tool httpx-toolkit
