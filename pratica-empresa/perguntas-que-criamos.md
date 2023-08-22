@@ -6,49 +6,55 @@ Em paralelo: Descrever a nossa empresa fictícia.
 
 ## Perguntas
 
- Quais produtos e serviços a empresa oferece?
+1 - Quais produtos e serviços a empresa oferece?
 
- Qual é o público alvo da empresa?
+2 - Qual é o público alvo da empresa?
 
- Qual a expectativa da empresa sobre esta consultoria de segurança?
+3 - Qual a expectativa da empresa sobre esta consultoria de segurança?
 
- Quantos funcionários diretos a empresa possui?
+4 - Quantos funcionários diretos a empresa possui?
 
- A empresa possui terceirizados?
+5 - A empresa possui terceirizados?
 
- Quantos computadores a empresa possui?
+6 - Quantos computadores a empresa possui?
 
- A jornada de trabalho é presencial ou remota?
+7 - A jornada de trabalho é presencial ou remota?
 
- A empresa já sofreu algum tipo de incidente de segurança?
+8 - A empresa já sofreu algum tipo de incidente de segurança?
 
- A empresa armazena dados sensíveis de acordo com a LGPD?
+9 - A empresa armazena dados sensíveis de acordo com a LGPD?
 
- A empresa possui um time voltado para a área de segurança?
+10 - A empresa possui um time voltado para a área de segurança?
 
- A empresa possui sede física?
+11 - A empresa possui sede física?
 
- A empresa possui uma política de acesso à sede física?
+12 - A empresa possui uma política de acesso à sede física?
 
- A sede física possui sistema de monitoramento por câmera?
+13 - A sede física possui sistema de monitoramento por câmera?
 
- A empresa possui um sistema de monitoramento ativo de logs?
+14 - A empresa possui um sistema de monitoramento ativo de logs?
 
- A empresa possui algum plano para recuperação de desastres naturais?
+15 - A empresa possui algum plano para recuperação de desastres naturais?
 
- A empresa possui algum padrão para atualização automática de sistemas operacionais?
+16 - A empresa possui algum padrão para atualização automática de sistemas operacionais?
 
- A empresa possui infraestrutura tecnológica (servidores) próprios ou na núvem?
+17 - A empresa possui infraestrutura tecnológica (servidores) próprios ou na núvem?
 
- A empresa depende de tecnologias legadas ou obsoletas para a operação?
+18 - A empresa depende de tecnologias legadas ou obsoletas para a operação?
 
-### Perguntas extras que roubamos do outro grupo
+19 - A empresa possui algum tipo de firewall ou EDR nas máquinas/servidores?
 
-A empresa possui um firewall nos seus servidores?
+20 - A empresa possui um plano de continuidade de negócio?
 
-A empresa possui um plano de continuidade de negócio?
+21 - A empresa possui filiais?
 
-A empresa possui filiais?
+22 - A empresa tem algum tipo de controle sobre o parque de máquinas/servidores (qual?)?
+
+23 - A empresa possui algum plano de resposta a incidentes?
+ 
+24 - A empresa já fez alguma análise de risco e possiveis vulnerabilidades?
+
+25 - Quais os tipos de acesso que a empresa recebe (api, acesso a sites)?
 
 ## Empresa fictícia
 
@@ -137,3 +143,30 @@ Tudo infra própria, sem núvem.
 - SQL Server 2008
 - dotnet core 2
 
+### A empresa tem algum tipo de controle sobre o parque de máquinas/servidores (qual?)?
+
+ Sim, controle sobre quais funcionários estão com cada máquina. Também tem controle de acesso aos servidores, com log de acesso
+
+### A empresa possui algum plano de resposta a incidentes?
+
+ Sim, tem um modelo descrevendo o que cada setor deve fazer em caso de ocorrer um incidente
+
+### A empresa já fez alguma análise de risco e possiveis vulnerabilidades?
+
+ Não
+
+### Quais os tipos de acesso que a empresa recebe (api, acesso a sites)?
+
+ Acesso via api, bibliotecas (JS) e via site
+
+### A empresa possui algum tipo de firewall ou EDR máquinas/servidores?
+
+ Sim, Cloudfare e EDR crowdstrike
+
+### A empresa possui um plano de continuidade de negócio?
+
+ Não
+
+### A empresa possui filiais?
+
+ Não

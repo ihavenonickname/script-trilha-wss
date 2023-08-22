@@ -118,3 +118,45 @@ Sim, possui somente infra própria.
 ## 14-A empresa está adequada a LGPD?
 
 Sim.
+
+## PARTE 2
+
+## 1 - A empresa possui alguma forma de gestão de ativos? Se sim, como ela é feita?
+
+Sim, controle sobre quais funcionários estão com cada máquina. Também tem controle de acesso aos servidores, com log de acesso
+
+## 2 - As documentações são compartilhadas entre os setores ou filiais?
+
+Não tem filial, mas é compatilhado entre setores
+
+## 3 - Qual é o serviço que mais gera retorno? ou quais?
+
+API para integração de pagamentos
+
+## 4 - Vocês já consideraram fazer uma modelagem de ameaças? se não, por quê?
+
+Não, por isso queremos contratar o serviço
+
+## 5 - Como é realizado o gerenciamento de acessos ao banco de dados para terceiros?
+
+Os terceirizados não acessam o banco de dados
+
+## 6 - Há uma política de segurança definida para as filiais? Ou cabe a elas definirem suas próprias?
+
+Não tem filial
+
+## 7- Em relação aos ativos hospedados na nuvem, como é garantido a visibilidade e gestão deles? Sendo que se encontram fora da infra local
+
+Não tem infra na nuvem
+
+## 8 - Dado que a empresa utiliza bastante e-mail para comunicação, como é realizada a prevenção contra ataques de phishing a colaboradores?
+
+Tem treinamentos internos para prevenção de phishing
+
+## 9 - Como a empresa lida com dados de pagamentos dos usuários? Quais são as medidas para proteger esses dados?
+
+Segue as medidas descritas na certificação PCI
+
+## 10 - Existe alguma rotina de verificação de vulnerabilidades nos sistemas que a empresa já possui?
+
+Não
