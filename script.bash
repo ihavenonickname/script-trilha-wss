@@ -229,43 +229,25 @@ step_3_start_ts=$(date +%s)
 # possivelmente vulneráveis.
 
 cat $(get_output_filename 2) | (
-    # O comando dirb testa uma lista de diretórios em uma dada URL. Caso
-    # nenhuma lista de diretórios seja informada (como é o caso aqui) ele
-    # utiliza a lista padrão que possui vários diretórios comuns em
-    # servidores web.
+    # O comando gobuster testa uma lista de diretórios em uma dada URL. No caso
+    # estamos utilizando a lista baixada do repositório
+    # https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/common.txt
     #
-    # Este comando espera receber a URL no primeiro parâmetro posicional,
-    # ou seja, não é possível encadear o dirb usando pipes. Por este motivo,
-    # o comando xargs atua como um "wraper" que redireciona cada linha do
-    # stdin para o primeiro parâmetro do dirb.
+    # Este comando espera receber a URL e após a lista de palavras
     #
-    # Flags utilizadas no xargs
-    # -I <string>: Informa o placeholder que será substituido pela linha
-    # vinda do stdin.
-    #
-    # Flags utilizadas no dirb
-    # -S: Modo silencioso. Não mexe na posição do cursor.
-    xargs -I {} dirb {} -S
+    # Flags utilizadas no gobuster
+    # -u: URL do alvo
+    # -q: Remover informações desnecessárias da saída
+    # -w: Arquivo contendo a lista de palavras
+    # --no-color: Não exibir a saída com cores
+    
+    # Demais etapas
+	# Filtra somente retorno com o status 200 de sucesso
+	# Formata saída para remover informações não utilizadas
+	# Formata saída com dominio mais o diretório encontrado
+    xargs -I@ sh -c 'gobuster dir -u @ -q --no-color -w common.txt | grep "Status: 20" |awk '\''{print $1}'\'' | sed "s|/|@/|"'
 ) | (
-    # Como o output do dirb mistura texto em inglês, marcadores e outras
-    # coisas, é necessário aplicar o grep e o cut para extrair as URLs que
-    # realmente interessam.
-    #
-    # Flags utilizadas no grep
-    # -E: Iutilizar o motor de regex estendido. Necessário por conta da
-    # âncora de início da string.
-    grep -E '^==> DIRECTORY:'
-) | (
-    # Flags utilizadas no cut
-    # -d <string>: Informa o delimitador para fatiar a string.
-    # -f <int>: Informa o índice (iniciando em 1) da fatia selecionada.
-    cut -d ' ' -f 3
-) | (
-    # Ao fim deste passo, o formato do stdout é:
-    # https://mail.example.com/admin
-    # https://mail.example.com/files
-    # https://www.example.com/cpanel
-    # https://www.example.com/wwwroot/static
+    # Salva no arquivo os diretórios encontrados
     cat > $(get_output_filename 3)
 )
 
