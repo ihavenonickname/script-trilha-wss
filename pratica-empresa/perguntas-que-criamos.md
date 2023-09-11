@@ -119,7 +119,7 @@ O funcionário possui um crachá com RFID que libera a porta automaticamente.
 
 ### A sede física possui sistema de monitoramento por câmera?
 
-Não.
+Sim, tem o sistema de monitoramento do condominio, e temos um circuito interno na parte dos servers.
 
 ### A empresa possui um sistema de monitoramento ativo de logs?
 
