@@ -153,15 +153,16 @@ Tudo infra própria, sem núvem.
 
 ### A empresa já fez alguma análise de risco e possiveis vulnerabilidades?
 
- Não
+ Sim, Estamos com um parceiro que efetua frequentemente os testes em nossas aplicações e infraestrutura.
 
 ### Quais os tipos de acesso que a empresa recebe (api, acesso a sites)?
 
  Acesso via api, bibliotecas (JS) e via site
 
-### A empresa possui algum tipo de firewall ou EDR máquinas/servidores?
+### A empresa possui algum tipo de firewall ou antivirus máquinas/servidores?
 
- Sim, Cloudfare e EDR crowdstrike
+ Sim, Cloudfare nas aplicaçòes e temos como firewall de borda akamai.
+ Nas estações e servers, temos Antivirus Kaspersky e EDR crowdstrike
 
 ### A empresa possui um plano de continuidade de negócio?
 
